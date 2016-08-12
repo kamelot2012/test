@@ -11,8 +11,7 @@ require_once('model/function.php');
 //language setting
 date_default_timezone_set('Europe/Kiev');
 
-$sql = 'SELECT * FROM articles';
-$result = result_sql_query($sql);
+$articles = articles_get_all();
 
 require_once('view/index.php');
 

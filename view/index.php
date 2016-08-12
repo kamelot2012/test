@@ -6,13 +6,13 @@
 </head>
 <body>
 <?php
-
-while ($row = mysql_fetch_array($result)){
-    echo $row['id_articles'] . '<br>';
-    echo $row[1]. '<br>';
-    echo $row['content']. '<br>';
+foreach ($articles as $article) {
+    echo $article['id_articles'] . '<br>';
+    echo $article['title'] . '<br>';
+    echo $article['content'] . '<br>';
 }
-mysql_close();
+
+
 ?>
 </body>
 </html>

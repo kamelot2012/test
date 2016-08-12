@@ -11,11 +11,19 @@ function connectToDatabase ($db_host, $db_login, $db_password ){
     mysql_query('SET NAMES utf8');
     mysql_select_db(DB_NAME) or die('No data base');
 }
-function result_sql_query($sql){
+function articles_get_all(){
 
     connectToDatabase(DB_HOST, DB_LOGIN, DB_PASSWORD);
 
+    $sql = 'SELECT * FROM articles';
+
     $result = mysql_query($sql);
     if(!$result) die('Error data base' . mysql_error());
-    return $result;
+    $res_arr = [];
+    while ($row = mysql_fetch_array($result)){
+        $res_arr[] = $row;
+    }
+    mysql_close();
+
+    return $res_arr;
 }
