@@ -1,3 +1,4 @@
+<a href="view/add_article.php">form</a><br/>
 <?php
 /**
  * Created by PhpStorm.

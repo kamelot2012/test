@@ -7,9 +7,9 @@
 <body>
 <?php
 foreach ($articles as $article) {
-    echo $article['id_articles'] . '<br>';
-    echo $article['title'] . '<br>';
-    echo $article['content'] . '<br>';
+    echo '<a href = "view_article.php?id=' . $article['id_articles'] . '">' . $article['id_articles'] . '<br>' .
+    $article['title'] . '<br>' .
+    $article['date'] . '<br></a>';
 }
 
 
